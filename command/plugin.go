@@ -13,8 +13,6 @@ import (
 	"github.com/hashicorp/packer/packer"
 	"github.com/hashicorp/packer/packer/plugin"
 
-	linode "github.com/dradtke/packer-builder-linode/linode"
-	vultr "github.com/dradtke/packer-builder-vultr/vultr"
 	alicloudecsbuilder "github.com/hashicorp/packer/builder/alicloud/ecs"
 	amazonchrootbuilder "github.com/hashicorp/packer/builder/amazon/chroot"
 	amazonebsbuilder "github.com/hashicorp/packer/builder/amazon/ebs"
@@ -75,6 +73,8 @@ import (
 	shelllocalprovisioner "github.com/hashicorp/packer/provisioner/shell-local"
 	windowsrestartprovisioner "github.com/hashicorp/packer/provisioner/windows-restart"
 	windowsshellprovisioner "github.com/hashicorp/packer/provisioner/windows-shell"
+	linode "github.com/yokiworks/packer/builder/linode"
+	vultr "github.com/yokiworks/packer/builder/vultr"
 )
 
 type PluginCommand struct {
