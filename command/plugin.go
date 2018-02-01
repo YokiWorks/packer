@@ -13,6 +13,8 @@ import (
 	"github.com/hashicorp/packer/packer"
 	"github.com/hashicorp/packer/packer/plugin"
 
+	linode "github.com/dradtke/packer-builder-linode/linode"
+	vultr "github.com/dradtke/packer-builder-vultr/vultr"
 	alicloudecsbuilder "github.com/hashicorp/packer/builder/alicloud/ecs"
 	amazonchrootbuilder "github.com/hashicorp/packer/builder/amazon/chroot"
 	amazonebsbuilder "github.com/hashicorp/packer/builder/amazon/ebs"
@@ -109,6 +111,8 @@ var Builders = map[string]packer.Builder{
 	"virtualbox-ovf":      new(virtualboxovfbuilder.Builder),
 	"vmware-iso":          new(vmwareisobuilder.Builder),
 	"vmware-vmx":          new(vmwarevmxbuilder.Builder),
+	"vultr":               new(vultr.Builder),
+	"linode":              new(linode.Builder),
 }
 
 var Provisioners = map[string]packer.Provisioner{
